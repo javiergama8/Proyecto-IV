@@ -36,3 +36,11 @@ Aunque el desarrollo del framework Bootstrap fue iniciado por Twitter, fue liber
 - MySQL, para bases de datos de usuarios y enlaces.
 
 - Despliegue en Azure.
+
+##Reparto del trabajo
+
+De la aplicación se encargará @javiergama8, el buscador de dominio lo realizarán @aserranogomez y @manolotello7 y para el despliegue automático, testeo, configuración, integración continua, etc.., participaremos los 3 colaboradores, ya que es la parte más importante de la asignatura de Infraestructura Virtual.
+
+###Licencia
+
+La licencia bajo la que publicamos esta aplicación es GNU GPL v3, esto da permiso a cualquier persona u organización para realizar modificaciones sobre la misma, además de poder realizar copias y distribuir tanto la versión original como la modificada, pudiendo cobrar o no por ello, pero siempre permaneciendo el mismo como software libre.
