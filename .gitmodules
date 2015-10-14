@@ -1,0 +1,9 @@
+[submodule "Proyecto-IV-Modulo1"]
+	path = Proyecto-IV-Modulo1
+	url = git@github.com:javiergama8/Proyecto-IV-Modulo1.git
+[submodule "Proyecto-IV-Modulo2"]
+	path = Proyecto-IV-Modulo2
+	url = git@github.com:aserranogomez/Proyecto-IV-Modulo2.git
+[submodule "ProyectoIV-Modulo3"]
+	path = ProyectoIV-Modulo3
+	url = git@github.com:manolotello7/ProyectoIV-Modulo3.git
