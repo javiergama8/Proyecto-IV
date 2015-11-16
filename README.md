@@ -44,3 +44,13 @@ De la aplicación se encargará @javiergama8, el buscador de dominio lo realizar
 ###Licencia
 
 La licencia bajo la que publicamos esta aplicación es GNU GPL v3, esto da permiso a cualquier persona u organización para realizar modificaciones sobre la misma, además de poder realizar copias y distribuir tanto la versión original como la modificada, pudiendo cobrar o no por ello, pero siempre permaneciendo el mismo como software libre.
+
+###Tercer Hito
+
+En esta parte del proyecto nos hemos encargado de elaborar el Front-end de la página web, es decir, nos hemos repartido el trabajo realizando uno el HTML5, otro el CSS3 y finalmente el JavaScript. La web quedaría de la siguiente manera:
+
+<img src="https://github.com/javiergama8/Images/blob/master/pageWeb.png">
+
+Para acceder a la web, basta con pinchar en el siguiente __enlace__:
+
+- https://4d92e3c4debb26c3d41ede4785392b1af3f3992f.googledrive.com/host/0B8nOgCL0Aof1SmhSWE1VaFNLOWM/
