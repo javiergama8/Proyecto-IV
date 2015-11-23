@@ -48,9 +48,7 @@ La licencia bajo la que publicamos esta aplicación es GNU GPL v3, esto da permi
 ###Segundo Hito
 
 En esta parte vamos a crear el makefile para instalar las herramientas necesarias para la realización de los test.
-
 <code>
-
 ####Makefile
 
 all: test install run
