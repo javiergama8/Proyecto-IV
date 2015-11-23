@@ -45,6 +45,46 @@ De la aplicación se encargará @javiergama8, el buscador de dominio lo realizar
 
 La licencia bajo la que publicamos esta aplicación es GNU GPL v3, esto da permiso a cualquier persona u organización para realizar modificaciones sobre la misma, además de poder realizar copias y distribuir tanto la versión original como la modificada, pudiendo cobrar o no por ello, pero siempre permaneciendo el mismo como software libre.
 
+###Segundo Hito
+
+En esta parte vamos a crear el makefile para instalar las herramientas necesarias para la realización de los test.
+
+<code>
+
+####Makefile
+
+all: test install run
+
+clean:
+
+	rm *~*
+	
+	rm '*.pyc'
+	
+test:
+
+	nosetests runserver.py
+	
+install:
+
+	sudo apt-get install lybmysqlclient
+	
+	sudo apt-get install python-dev
+	
+	pip install --upgrade pip
+	
+	pip install MySQL-python
+	
+	pip install Flask
+	
+	pip install nose
+	
+run:
+
+	python runserver.py
+	
+</code>
+
 ###Tercer Hito
 
 En esta parte del proyecto nos hemos encargado de elaborar el Front-end de la página web, es decir, nos hemos repartido el trabajo realizando uno el HTML5, otro el CSS3 y finalmente el JavaScript. La web quedaría de la siguiente manera:
