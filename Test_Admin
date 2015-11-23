@@ -1,0 +1,36 @@
+from flask import Flask
+import unittest
+
+class Admin (unittest.TestCase):
+	name = "Test_de_Prueba_Admin"
+	id = "test_idAdmin"
+	email = "testAdmin@gmail.es"
+	
+	def get_name_test(self):
+        self.assertEqual(self.name, "Test_de_Prueba_Admin")
+
+        return self.name
+
+    def get_id_test(self):
+        self.assertEqual(self.id, "test_idAdmin")
+
+        return self.id
+
+    def get_email_test(self):
+        self.assertEqual(self.email,"testAdmin@gmail.es")
+
+        return self.email
+
+    def login_test(self,id="test_idAdmin",password="123456789"):
+        self.assertEqual(id,"test_idAdmin")
+        self.assertEqual(password,"123456789")
+
+        return True
+
+    def get_gender_test(self):
+        gender = "male"
+
+        self.assertEqual(gender,"male")
+
+        return gender
+
