@@ -1,0 +1,343 @@
+﻿<?php
+	session_start();
+	include('formulario/acceso_db.php'); // incluimos el archivo de conexión a la Base de Datos
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	
+		<title>SHW-Enlaces</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<script type="text/javascript" src="js/jquery-1.4.2.js" ></script>
+		<script type="text/javascript" src="js/cufon-yui.js"></script>
+		<script type="text/javascript" src="js/cufon-replace.js"></script>  
+		<script type="text/javascript" src="js/Copse_400.font.js"></script>
+		<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+		<script type="text/javascript" src="js/imagepreloader.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+		<script type="text/javascript">
+			preloadImages([
+			'images/menu1_active.gif',
+			'images/menu2_active.gif',
+			'images/menu3_active.gif',
+			'images/menu4_active.gif',
+			'images/marker_right_active.jpg',
+			'images/marker_left_active.jpg',
+			'images/menu5_active.gif']);
+		</script>
+		
+	</head>
+	
+	<body id="page1">
+		<div class="body1">
+			<div class="body2">
+				<div class="main">
+		<!-- header -->
+					<header>
+						<div class="wrapper">
+						
+							<h1><a href="index.php" id="logo">ENLAZADOS</a></h1>
+							<div class="right">
+							
+								<nav>
+									<?php
+									 		if(empty($_SESSION['usuario_nombre'])) { // comprobamos que las variables de sesión estén vacías        
+									?>
+										<!--Acceso identificado-->
+											<div style="margin-top:41px; margin-right:-60px">
+											<form method="POST" action="formulario/comprobar.php" align="right">
+												<!--Creamos los campos y un label para cada uno de ellos-->
+												<font color="white"><b><label for="n_usuario">Usuario: </label></b></font>
+													<input type="text" name="usuario_nombre" />
+												<font color="white"><b><label for="pwd">Contraseña: </label></b></font>
+												<!--Este input debe ser -type="password" para que no se muestren los caracteres-->
+													<input type="password" name="usuario_clave" />
+												<!--Al dar click al botón se ejecutará el -action-->
+													<input id="boton" type="submit" name="enviar" value="Iniciar Sesión"/>
+													<a class="recuperar" href="formulario/recuperar_contrasena.php"><div style="color:#FFFFFF;text-decoration:none;"><b>¿Olvidaste la contraseña?</b></div></a>
+											</form>		
+											</div>
+											
+											<?php
+											 		}else {
+											?>
+		
+											<div id="sesionactivada">
+												  	<p>Hola <strong><?=$_SESSION['usuario_nombre']?></strong> | <a href="formulario/perfil.php">Perfil</a> |<a href="formulario/logout.php">Salir</a></p>
+											</div>
+											
+											<style>
+											#sesionactivada{
+												margin-top: 40px;
+												font-size: 120%;
+												float: right;
+												margin-right: -60px;
+												color: #FBFBEF
+											}
+											
+											
+											</style>
+
+											<?php
+											 		}
+											?>  
+											<!-- FINAL Acceso identificado-->
+											
+											<style>
+														#boton {
+															  background: #3498db;
+															  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+															  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+															  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+															  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+															  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+															  -webkit-border-radius: 28;
+															  -moz-border-radius: 28;
+															  border-radius: 28px;
+															  text-shadow: 2px 2px 3px #080608;
+															  font-family: Georgia;
+															  color: #ffffff;
+															  font-size: 16px;
+															  padding: 1px 6px 1px 3px;
+															  text-decoration: none;
+															}
+
+															.btn:hover {
+															  background: #3cb0fd;
+															  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+															  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+															  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+															  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+															  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+															  text-decoration: none;
+															}
+											</style>
+											
+								</nav>
+								
+							</div>
+							
+						</div>
+						
+						<?php		
+							if(empty($_SESSION['usuario_nombre'])) { // SI EL USUARIO NO ESTÁ REGISTRADO MOSTRAMOS ESTE MENÚ     
+						?>
+								
+						<nav id="menu">
+							<ul>
+								<li class="nav1" id="active"><a href="index.php">INICIO</a></li>
+								<li class="nav2"><a href="Secciones.php">SECCIONES</a></li>
+								
+								<li class="nav4"><a href="Funcionamiento.php">INFORMACIÓN</a></li>
+								<li class="nav5"><a href="Contactar.php">CONTACTAR</a></li>
+								<li class="nav3"><a href="formulario/formulario1.php">REGISTRO</a></li>
+							</ul>
+						</nav>
+						
+						
+						<?php
+							}else { //SI EL USUARIO SÍ ESTÁ REGISTRADO, MOSTRAMOS EL ENLAZO
+						?>
+						
+											
+											<nav id="menu">
+							<ul>
+								<li class="nav1" id="active"><a href="index.php">INICIO</a></li>
+								<li class="nav2"><a href="Secciones.php">SECCIONES</a></li>
+								
+								<li class="nav4"><a href="Funcionamiento.php">INFORMACIÓN</a></li>
+								<li class="nav5"><a href="Contactar.php">CONTACTAR</a></li>
+								<li class="nav3"><a href="Enlaza-me.php">ENLAZA-ME</a></li>
+							</ul>
+						</nav>
+											
+						<?php
+							}
+						?>  
+						
+					</header>
+					<!------fin header---->
+					</div>
+				</div>
+			</div>
+			<!-----Imagenes del inicio-->
+			<div class="body3">
+				<div class="body4">
+					<div class="main">
+						<div class="slogan">
+							<div id="slider">
+								<img src="images/texto1.jpg" alt="">	
+								<img src="images/textoImage.png" alt="">	
+								<img src="images/texto3.jpg" alt="">				
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--fin imagenes del inicio-->
+		
+		<!-- contenido -->
+			
+			<div class="body5">
+				<div class="body6">
+					<div class="main">
+						<div class="wrapper">
+							<figure class="left"><img src="images/letter1.png" alt=""></figure>
+							<h2>Tan solo elige la ¡<span>Sección</span>!</h2>
+							<center><h1>Aquí podrás encontrar cualquier enlace que desees.</h1></center>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="body7">
+				<div class="main">
+					<section id="content">
+						<div class="wrapper">
+						
+						<center><font><b><p>SECCIONES MÁS DESTACADAS DE INTERNET</p></b></font></center>
+						
+						<article class="col1">
+							<div class="box1"><div class="box1_bot"><div class="box1_top">
+								<div class="pad"><div class="pad1">
+									<h2 class="center">Redes Sociales</h2>
+									<center><img src="images/redessociales.png" alt=""></center>
+									
+								</div></div>
+							</div></div></div>
+				  		</article>
+				  		
+						<article class="col1 pad_left1">
+							<div class="box1"><div class="box1_bot"><div class="box1_top">
+								<div class="pad">
+										<div class="pad1">
+									<h2 class="center">Periodismo</h2>
+									<center><img src="images/leer.png" alt=""></center>
+									
+								</div></div>
+							</div></div></div>
+				  		</article>
+				  		
+						<article class="col1 pad_left1">
+							<div class="box1"><div class="box1_bot"><div class="box1_top">
+								<div class="pad">
+										<div class="pad1">
+									<h2 class="center">Turismo</h2>
+									<center><img src="images/viajes.png" alt=""></center>
+									
+								</div></div>
+							</div></div></div>
+				  		</article>
+				  		
+						</div>
+						
+						
+						<div class="wrapper">
+							
+							
+
+							
+							
+							
+						</div>
+						
+						
+						
+						
+
+						
+					</section>
+				</div>
+			</div>
+					<!-- / content -->
+					<!-- footer -->
+	<div class="body8">
+	<div class="body9">
+		<div class="main">
+			<footer>
+				<div class="col_1">
+					<h3>REDES SOCIALES</h3>
+					<ul class="list3">
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Flickr</a></li>
+						<li><a href="#">Blogger</a></li>
+					</ul>
+				</div>
+				<div class="col_2 pad_left1">
+				
+
+						<?php		
+							if(empty($_SESSION['usuario_nombre'])) { // SI EL USUARIO NO ESTÁ REGISTRADO MOSTRAMOS ESTE MENÚ     
+						?>
+						
+								<center><h3><a href="formulario/acceso_admin.php">ACCESO ADMIN</a></h3></center>
+											
+						<?php
+							}else { //SI EL USUARIO SÍ ESTÁ REGISTRADO, MOSTRAMOS EL ENLAZO
+						?>
+						
+								<center><h3>Usuario logueado</h3></center>
+											
+						<?php
+							}
+						?>    
+				
+				
+					<div class="wrapper">
+						<ul class="">
+							
+							<h2><center><li><a href="#">Copyright © 2015 Enlazados. All rights reserved.</a></li></center></h2>
+						</ul>
+						<ul class="list3 col_1 pad_left1">
+							
+						</ul>
+					</div>
+				</div>
+				<div class="col_3">
+					<a href="index.html" id="footer_logo">Enlazados</a>
+					
+					
+				</div>
+			</footer>
+		</div>
+<!-- / footer -->
+			</div>
+		</div>
+		<script type="text/javascript"> Cufon.now(); </script>
+		<script type="text/javascript">
+			$(window).load(function() {
+			$('#slider').nivoSlider({
+				  effect:'sliceDown',     
+				  slices:20,
+				  animSpeed:300,
+				  pauseTime:9999999999,
+				  startSlide:0, 
+				  directionNav:true, 
+				  directionNavHide:false, 
+				  controlNav:false, 
+				  controlNavThumbs:false, 
+				  controlNavThumbsFromRel:false, 
+				  controlNavThumbsSearch: '.jpg', 
+				  controlNavThumbsReplace: '_thumb.jpg', 
+				  keyboardNav:true, 
+				  pauseOnHover:true, 
+				  manualAdvance:false, 
+				  captionOpacity:1, 
+				  beforeChange: function(){},
+				  afterChange: function(){},
+				  slideshowEnd: function(){} 
+			 });
+			 });
+		</script>
+	</body>
+</html>
+
+
