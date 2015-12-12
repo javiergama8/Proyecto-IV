@@ -54,3 +54,15 @@ En esta parte del proyecto nos hemos encargado de elaborar el Front-end de la p�
 Para acceder a la web, basta con pinchar en el siguiente __enlace__:
 
 - https://4d92e3c4debb26c3d41ede4785392b1af3f3992f.googledrive.com/host/0B8nOgCL0Aof1SmhSWE1VaFNLOWM/
+
+#Cuarto Hito
+
+Para este hito hemos creado una cuenta en azure, en la cual nos hemos registrado y hemos creado una máquina virtual, con sistema operativo ubuntu server 12.04.
+
+Despues de crear la máquina virtual, por ftp nos conectamos a la maquina y subimos a ella los archivos que hemos desarrollado de nuestra pagina web.
+
+A continuación dejo una captura de la web funcionando y un enlace a la misma.
+
+![enlazados](https://i.gyazo.com/4ff25fa37b2e54d717b6efe73b482fb8.png)
+
+Y aqui el [enlace](http://enlazados-iv.azurewebsites.net/WebPage/site/index.php "web")
