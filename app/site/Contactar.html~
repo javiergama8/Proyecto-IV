@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SHW-Enlaces</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<script type="text/javascript" src="js/jquery-1.4.2.js" ></script>
+		<script type="text/javascript" src="js/cufon-yui.js"></script>
+		<script type="text/javascript" src="js/cufon-replace.js"></script>  
+		<script type="text/javascript" src="js/Copse_400.font.js"></script>
+		<script type="text/javascript" src="js/imagepreloader.js"></script>
+		<script type="text/javascript">
+			preloadImages([
+			'images/menu1_active.gif',
+			'images/menu2_active.gif',
+			'images/menu3_active.gif',
+			'images/menu4_active.gif',
+			'images/menu5_active.gif']);
+		</script>
+		
+	</head>
+	
+	<body id="page5">
+		<div class="body1">
+			<div class="body2">
+				<div class="main">
+		<!-- header -->
+					<header>
+						<div class="wrapper">
+							<h1><a href="index.html" id="logo">ENLAZADOS</a></h1>
+							<div class="right">
+								<nav>
+									<ul id="top_nav">
+										<li><a href="#">BÚSQUEDA</a></li>
+									</ul>
+									<form id="search" method="post">
+										<div>
+											<input type="submit" class="submit" value="">
+											<input type="text" class="input">
+										</div>
+									</form>
+								</nav>
+							</div>
+						</div>
+				
+						<nav id="menu">
+							<ul>
+								<li class="nav1" id="active"><a href="index.html">INICIO</a></li>
+								<li class="nav2"><a href="Secciones.html">SECCIONES</a></li>
+								
+								<li class="nav4"><a href="Products.html">INFORMACIÓN</a></li>
+								<li class="nav5"><a href="Contactar.html">CONTACTAR</a></li>
+							</ul>
+						</nav>
+					</header>
+					</div>
+				</div>
+			</div>
+		<!-- / header -->
+		<!-- contenido -->
+			<div class="body5">
+				<div class="body6">
+					<div class="main">
+						<div class="wrapper">
+							<figure class="left"><img src="images/letter5.png" alt=""></figure>
+							<h2>Valoramos sus ¡<span>Comentarios</span>!</h2>
+							
+					</div>
+				</div>
+			</div>
+			<div class="body7">
+				<div class="main">
+					<section id="content">
+				
+						<div class="wrapper">
+							<article class="col2">
+								<div class="pad1">
+									<h2>Formulario de contacto</h2>
+									<form id="ContactForm" method="post">
+										<div>
+											<div  class="wrapper">
+												<strong>Nombre:</strong>
+												<div class="bg"><input type="text" class="input" ></div>
+											</div>
+											<div  class="wrapper">
+												<strong>Email:</strong>
+												<div class="bg"><input type="text" class="input" >	</div>							
+											</div>
+											<div  class="textarea_box">
+												<strong>Mensaje:</strong>
+												<div class="bg"><textarea name="textarea" cols="1" rows="1"></textarea>		</div>						
+											</div>
+											<a href="#" class="button" onClick="document.getElementById('ContactForm').submit()"><span><span>Enviar</span></span></a>
+											<a href="#" class="button" onClick="document.getElementById('ContactForm').reset()"><span><span>Limpiar</span></span></a>
+										</div>
+									</form>
+								</div>	
+						
+							</article>
+							
+								
+						</div>
+				
+					</section>
+				</div>
+			</div>
+		<!-- fin contenido-->
+		<!-- footer -->
+	<div class="body8">
+	<div class="body9">
+		<div class="main">
+			<footer>
+				<div class="col_1">
+					<h3>REDES SOCIALES</h3>
+					<ul class="list3">
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Flickr</a></li>
+						<li><a href="#">Blogger</a></li>
+					</ul>
+				</div>
+				<div class="col_2 pad_left1">
+					
+					<div class="wrapper">
+						<ul class="">
+							
+							<h2><center><br><br><br<br><br><li><a href="#">Copyright © 2015 Enlazados. All rights reserved.</a></li></center></h2>
+						</ul>
+						<ul class="list3 col_1 pad_left1">
+							
+						</ul>
+					</div>
+				</div>
+				<div class="col_3">
+					<a href="index.html" id="footer_logo">Enlazados</a>
+					
+					
+				</div>
+			</footer>
+		</div>
+<!-- / footer -->
+			</div>
+			</div>
+		<script type="text/javascript"> Cufon.now(); </script>
+	</body>
+</html>
